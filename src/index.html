@@ -1,14 +1,61 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/hidden.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <div class="mobile-header">
+    <img src="./images/logo.jpg" alt="" class="logo">
+    <button class="mobile-btn" type="button" aria-label="Кнопка переключения меню" aria-expanded="false" data-menu-button>
+      <svg width="40" height="40">
+        <use class="mobile-btn__menu" href="./images/icons.svg#icon-mobile-menu"></use>
+        <use class="mobile-btn__close" href="./images/icons.svg#icon-mobile-close"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-overlay" data-menu>
+  <div class="mobile-menu">
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Парики</a></li>
+      <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Костюмы</a></li>
+      <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Аксессуары</a></li>
+      <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Контакты</a></li>
+      <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Доставка</a></li>
+      <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Корзина</a></li>
+      <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Профиль</a></li>
+    </ul>
+  </div>
+  </div>
+    </div>
+  </header>
+  <main>
+    <section>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="./images/slider/slider-1.jpeg" alt=""></div>
+        <div class="swiper-slide"><img src="./images/slider/slider-2.jpeg" alt=""></div>
+        <div class="swiper-slide"><img src="./images/slider/slider-3.jpeg" alt=""></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    </section>
+  </main>
+  <script src="/src/js/mobile-menu.js" type="module"></script>
+  <script src="/src/js/swiper.js" type="module"></script>
+</body>
 </html>
